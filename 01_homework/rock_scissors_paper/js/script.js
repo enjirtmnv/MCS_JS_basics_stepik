@@ -35,12 +35,12 @@ if (computer == 0){
 
 
 
-if (computer == 0 && player == 0 || computer == 1 && player == 1 || computer == 2 && player == 2 ){
+if (computer == player ){
     console.log('dead heat');
 } else if (computer == 0 && player == 1 || computer == 1 && player == 2 || computer == 2 && player == 0 ) {
     console.log('computer win');
 } else if (computer == 1 && player == 0 || computer == 2 && player == 1 || computer == 0 && player == 2 ) {
     console.log('player win');
 } else {
-    console.log('error');
+    console.log('vi nichego ne vybrali');
 }
