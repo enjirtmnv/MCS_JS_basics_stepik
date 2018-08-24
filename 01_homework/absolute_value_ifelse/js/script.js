@@ -7,7 +7,7 @@ let absoluteValue = Number(Value);
 if (absoluteValue == 0){
     console.log(0);
 }else if (absoluteValue < 0){
-    console.log(absoluteValue - absoluteValue * 2);
+    console.log(absoluteValue * (-1));
 }else if(absoluteValue > 0){
     console.log(absoluteValue);
 }
