@@ -1,0 +1,8 @@
+@import url(reset.css);
+
+body{
+    background-color: lightpink;
+}
+p{
+    display: none;
+}
