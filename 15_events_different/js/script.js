@@ -2,6 +2,7 @@ window.addEventListener('load', function () {
     const button = document.querySelector('.button');
     const ball = document.querySelector('.ball');
     const par = document.querySelector('p');
+
     button.addEventListener('click', ()=>{
         ball.style.animationPlayState = 'running';
     });
