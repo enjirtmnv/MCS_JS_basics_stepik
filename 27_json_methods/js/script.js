@@ -26,5 +26,9 @@ const DATA = [
 //
 // console.log(DATA2);
 
+
+console.log(DATA);
 console.log(JSON.stringify(DATA));
+console.log(DATA);
+
 
