@@ -1,0 +1,39 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Share+Tech+Mono');
+
+body{
+    background: linear-gradient(#6097d9,white);
+    color: #ffe000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.enter, .cityInput, .calculate, .resultTemp, .resultWind{
+    font-size: 28px;
+    margin: 5px auto;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: #ea0000 1.5px 1px 0.5px;
+    letter-spacing: -0.5px;
+}
+input[type="text"]{
+    color: black;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 17px;
+    text-transform: capitalize;
+
+}
+input[type="submit"]{
+    color: white;
+    background: transparent;
+    border: transparent;
+    font-size: 24px;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: black 1.5px 1px 0.5px;
+    letter-spacing: -0.5px;
+    margin: 18px 0 20px 0;
+}
