@@ -1,84 +1,97 @@
 @import url(reset.css);
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Share+Tech+Mono');
 
-@keyframes sunshine {
-    from { transform: rotate(0deg)  ; }
-    to   { transform: rotate(360deg) ; }
+@keyframes loading1{
+    from { left: -75px  ; }
+    to   { left: -25px ; }
+}
+@keyframes loading2{
+    from { left: -25px  ; }
+    to   { left: 25px ; }
+}
+@keyframes loading3{
+    from { left: 25px  ; }
+    to   { left: 75px ; }
 }
 
-@keyframes ray1 {
-    from{
-        transform:matrix(1,0,0,1,0,0);
-    }
-    to{
-        transform:matrix(1,0,0,1,0,-50);
-        opacity: 0;
-    }
-}
-@keyframes ray2 {
-    from{
-        transform:matrix(0.71,0.71,-0.71,0.71,0,0);
-    }
-    to{
-        transform:matrix(0.71,0.71,-0.71,0.71,40,-40);
-        opacity: 0;
-    }
-}
+/*@keyframes sunshine {*/
+    /*from { transform: rotate(0deg)  ; }*/
+    /*to   { transform: rotate(360deg) ; }*/
+/*}*/
 
-@keyframes ray3 {
-    from{
-        transform:matrix(0,1,-1,0,0,0);
-    }
-    to{
-        transform:matrix(0,1,-1,0,50,0);
-        opacity: 0;
-    }
-}
-@keyframes ray4 {
-    from{
-        transform:matrix(-0.71,0.71,-0.71,-0.71,0,0);
-    }
-    to{
-        transform:matrix(-0.71,0.71,-0.71,-0.71,40,40);
-        opacity: 0;
-    }
-}
-@keyframes ray5 {
-    from{
-        transform:matrix(1,0,0,1,0,0);
-    }
-    to{
-        transform:matrix(1,0,0,1,0,50);
-        opacity: 0;
-    }
-}
-@keyframes ray6 {
-    from{
-        transform:matrix(-0.71,-0.71,0.71,-0.71,0,0);
-    }
-    to{
-        transform:matrix(-0.71,-0.71,0.71,-0.71,-40,40);
-        opacity: 0;
-    }
-}
-@keyframes ray7 {
-    from{
-        transform:matrix(-0.00,-1.00,1.00,-0.00,0,0);
-    }
-    to{
-        transform:matrix(-0.00,-1.00,1.00,-0.00,-50,0);
-        opacity: 0;
-    }
-}
-@keyframes ray8 {
-    from{
-        transform:matrix(0.71,-0.71,0.71,0.71,0,0);
-    }
-    to{
-        transform:matrix(0.71,-0.71,0.71,0.71,-40,-40);
-        opacity: 0;
-    }
-}
+/*@keyframes ray1 {*/
+    /*from{*/
+        /*transform:matrix(1,0,0,1,0,0);*/
+    /*}*/
+    /*to{*/
+        /*transform:matrix(1,0,0,1,0,-50);*/
+        /*opacity: 0;*/
+    /*}*/
+/*}*/
+/*@keyframes ray2 {*/
+    /*from{*/
+        /*transform:matrix(0.71,0.71,-0.71,0.71,0,0);*/
+    /*}*/
+    /*to{*/
+        /*transform:matrix(0.71,0.71,-0.71,0.71,40,-40);*/
+        /*opacity: 0;*/
+    /*}*/
+/*}*/
+
+/*@keyframes ray3 {*/
+    /*from{*/
+        /*transform:matrix(0,1,-1,0,0,0);*/
+    /*}*/
+    /*to{*/
+        /*transform:matrix(0,1,-1,0,50,0);*/
+        /*opacity: 0;*/
+    /*}*/
+/*}*/
+/*@keyframes ray4 {*/
+    /*from{*/
+        /*transform:matrix(-0.71,0.71,-0.71,-0.71,0,0);*/
+    /*}*/
+    /*to{*/
+        /*transform:matrix(-0.71,0.71,-0.71,-0.71,40,40);*/
+        /*opacity: 0;*/
+    /*}*/
+/*}*/
+/*@keyframes ray5 {*/
+    /*from{*/
+        /*transform:matrix(1,0,0,1,0,0);*/
+    /*}*/
+    /*to{*/
+        /*transform:matrix(1,0,0,1,0,50);*/
+        /*opacity: 0;*/
+    /*}*/
+/*}*/
+/*@keyframes ray6 {*/
+    /*from{*/
+        /*transform:matrix(-0.71,-0.71,0.71,-0.71,0,0);*/
+    /*}*/
+    /*to{*/
+        /*transform:matrix(-0.71,-0.71,0.71,-0.71,-40,40);*/
+        /*opacity: 0;*/
+    /*}*/
+/*}*/
+/*@keyframes ray7 {*/
+    /*from{*/
+        /*transform:matrix(-0.00,-1.00,1.00,-0.00,0,0);*/
+    /*}*/
+    /*to{*/
+        /*transform:matrix(-0.00,-1.00,1.00,-0.00,-50,0);*/
+        /*opacity: 0;*/
+    /*}*/
+/*}*/
+/*@keyframes ray8 {*/
+    /*from{*/
+        /*transform:matrix(0.71,-0.71,0.71,0.71,0,0);*/
+    /*}*/
+    /*to{*/
+        /*transform:matrix(0.71,-0.71,0.71,0.71,-40,-40);*/
+        /*opacity: 0;*/
+    /*}*/
+/*}*/
 
 
 
@@ -86,7 +99,7 @@
 
 
 body{
-    background: linear-gradient(#6097d9,white);
+    background: linear-gradient(#6097d9, #e9f5ff);
     color: #ffe000;
     height: 100vh;
     display: flex;
@@ -95,25 +108,39 @@ body{
     flex-direction: column;
     text-align: center;
 }
+.weather{
+    font-size: 125px;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: #ea0000 1.5px 1px 0.5px;
+    letter-spacing: -0.5px;
+    margin-bottom: 40px;
+}
+.blockLine{
+    margin-bottom: 160px;
+}
 .enter{
-    font-size: 45px;
+    font-size: 35px;
     font-family: 'Press Start 2P', cursive;
     text-shadow: #ea0000 1.5px 1px 0.5px;
     letter-spacing: -0.5px;
 }
 .resultTemp, .resultWind{
-    font-size: 32px;
+    font-size: 27px;
     margin: 5px auto;
     font-family: 'Press Start 2P', cursive;
     text-shadow: #ea0000 1.5px 1px 0.5px;
     letter-spacing: -0.5px;
+
+}
+.result{
+    margin-bottom: 230px;
 }
 input[type="text"]{
     color: black;
     font-family: 'Share Tech Mono', monospace;
-    font-size: 45px;
+    font-size: 40px;
     text-align: center;
-    margin-top: 55px;
+    margin-top: 45px;
     text-transform: capitalize;
 
 }
@@ -121,7 +148,7 @@ input[type="submit"]{
     color: white;
     background: transparent;
     border: transparent;
-    font-size: 26px;
+    font-size: 21px;
     font-family: 'Press Start 2P', cursive;
     text-shadow: black 1.5px 1px 0.5px;
     letter-spacing: -0.5px;
@@ -130,23 +157,58 @@ input[type="submit"]{
 input[type="submit"]:hover{
     text-shadow: black 3.5px 3px 0.5px;
 }
-.sunBlock{
 
 
+.line1{
+    position: relative;
+    bottom: 20px;
+    width: 10px;
+    height: 10px;
+    background: #ffe000;
+    animation: loading1 2s steps(3) infinite ;
+    box-shadow: 1px 1px 0.1px #ea0000;
 }
-.sun{
+.line2{
     position: relative;
     bottom: 30px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-image: linear-gradient(#ff5200, #ffe000);
-    animation-name: sunshine;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count:  infinite;
-
+    width: 10px;
+    height: 10px;
+    background: #ffe000;
+    animation: loading2 2s steps(3) infinite ;
+    box-shadow: 1px 1px 0.1px #ea0000;
 }
+.line3{
+    position: relative;
+    bottom: 40px;
+    width: 10px;
+    height: 10px;
+    background: #ffe000;
+    animation: loading3 2s steps(3) infinite ;
+    box-shadow: 1px 1px 0.1px #ea0000;
+}
+.line1:hover{
+    transform: scale(2,2);
+}
+.line2:hover{
+    transform: scale(2,2);
+}
+.line3:hover{
+    transform: scale(2,2);
+}
+
+/*.sun{*/
+    /*position: relative;*/
+    /*bottom: 30px;*/
+    /*width: 150px;*/
+    /*height: 150px;*/
+    /*border-radius: 50%;*/
+    /*background-image: linear-gradient(#ff5200, #ffe000);*/
+    /*animation-name: sunshine;*/
+    /*animation-duration: 3s;*/
+    /*animation-timing-function: linear;*/
+    /*animation-iteration-count:  infinite;*/
+
+/*}*/
 /*.shine{*/
     /*position: relative;*/
     /*bottom: 120px;*/
@@ -158,81 +220,81 @@ input[type="submit"]:hover{
     /*animation-iteration-count:  infinite;*/
 /*}*/
 
-.shine1{
-    position: relative;
-    bottom: 203px;
-    left: 71px;
-    width: 8px;
-    height: 10px;
-    background: #ffe000;
-    animation: ray1 1.3s steps(8) infinite;
-}
-.shine2{
-    position: relative;
-    bottom: 188px;
-    left: 133px;
-    width: 8px;
-    height: 10px;
-    background: #ffe000;
-    animation-name: ray2;
-    animation-duration: 1.3s;
-    animation-timing-function: steps(8);
-    animation-iteration-count:  infinite;
+/*.shine1{*/
+    /*position: relative;*/
+    /*bottom: 203px;*/
+    /*left: 71px;*/
+    /*width: 8px;*/
+    /*height: 10px;*/
+    /*background: #ffe000;*/
+    /*animation: ray1 1.3s steps(8) infinite;*/
+/*}*/
+/*.shine2{*/
+    /*position: relative;*/
+    /*bottom: 188px;*/
+    /*left: 133px;*/
+    /*width: 8px;*/
+    /*height: 10px;*/
+    /*background: #ffe000;*/
+    /*animation-name: ray2;*/
+    /*animation-duration: 1.3s;*/
+    /*animation-timing-function: steps(8);*/
+    /*animation-iteration-count:  infinite;*/
 
-}
-.shine3{
-    position: relative;
-    bottom: 133px;
-    left: 163px;
-    width: 8px;
-    height: 10px;
-    background: #ffe000;
-    animation: ray3 1.3s steps(8) infinite;
-}
-.shine4{
-    position: relative;
-    bottom: 75px;
-    left: 135px;
-    width: 8px;
-    height: 10px;
-    background: #ffe000;
-    animation: ray4 1.3s steps(8) infinite;
-}
-.shine5{
-    position: relative;
-    bottom: 59px;
-    left: 71px;
-    width: 8px;
-    height: 10px;
-    background: #ffe000;
-    animation: ray5 1.3s steps(8) infinite;
-}
-.shine6{
-    position: relative;
-    bottom: 95px;
-    left: 12px;
-    width: 8px;
-    height: 10px;
-    background: #ffe000;
-    animation: ray6 1.3s steps(8) infinite;
-}
-.shine7{
-    position: relative;
-    bottom: 173px;
-    left: -17px;
-    width: 8px;
-    height: 10px;
-    background: #ffe000;
-    animation: ray7 1.3s steps(8) infinite;
-}
-.shine8{
-    position: relative;
-    bottom: 245px;
-    left: 9px;
-    width: 8px;
-    height: 10px;
-    background: #ffe000;
-    animation: ray8 1.3s steps(8) infinite;
-}
+/*}*/
+/*.shine3{*/
+    /*position: relative;*/
+    /*bottom: 133px;*/
+    /*left: 163px;*/
+    /*width: 8px;*/
+    /*height: 10px;*/
+    /*background: #ffe000;*/
+    /*animation: ray3 1.3s steps(8) infinite;*/
+/*}*/
+/*.shine4{*/
+    /*position: relative;*/
+    /*bottom: 75px;*/
+    /*left: 135px;*/
+    /*width: 8px;*/
+    /*height: 10px;*/
+    /*background: #ffe000;*/
+    /*animation: ray4 1.3s steps(8) infinite;*/
+/*}*/
+/*.shine5{*/
+    /*position: relative;*/
+    /*bottom: 59px;*/
+    /*left: 71px;*/
+    /*width: 8px;*/
+    /*height: 10px;*/
+    /*background: #ffe000;*/
+    /*animation: ray5 1.3s steps(8) infinite;*/
+/*}*/
+/*.shine6{*/
+    /*position: relative;*/
+    /*bottom: 95px;*/
+    /*left: 12px;*/
+    /*width: 8px;*/
+    /*height: 10px;*/
+    /*background: #ffe000;*/
+    /*animation: ray6 1.3s steps(8) infinite;*/
+/*}*/
+/*.shine7{*/
+    /*position: relative;*/
+    /*bottom: 173px;*/
+    /*left: -17px;*/
+    /*width: 8px;*/
+    /*height: 10px;*/
+    /*background: #ffe000;*/
+    /*animation: ray7 1.3s steps(8) infinite;*/
+/*}*/
+/*.shine8{*/
+    /*position: relative;*/
+    /*bottom: 245px;*/
+    /*left: 9px;*/
+    /*width: 8px;*/
+    /*height: 10px;*/
+    /*background: #ffe000;*/
+    /*animation: ray8 1.3s steps(8) infinite;*/
+/*}*/
 
 
